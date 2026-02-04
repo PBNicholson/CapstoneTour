@@ -1,0 +1,23 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200ed3a42059ecf4fb09aa2fb702fff1, type: 3}
+  m_Name: TestTourData
+  m_EditorClassIdentifier: Assembly-CSharp::TourData
+  buildingName: Test Building
+  buildingThumbnail: {fileID: 0}
+  navigationRadius: 5
+  defaultStartNodeId: TestNode1
+  floors: 0100000002000000
+  nodes:
+  - {fileID: 11400000, guid: 8cf376bddc0ebc64b98da08fecce7bdf, type: 2}
+  - {fileID: 11400000, guid: f5934b6acfdf8f74d8c68c3e5554ce11, type: 2}
+  - {fileID: 11400000, guid: a2c6b630800850941915f98c32214757, type: 2}

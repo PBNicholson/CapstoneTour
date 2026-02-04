@@ -12,7 +12,7 @@ PlayerSettings:
   targetDevice: 2
   useOnDemandResources: 0
   accelerometerFrequency: 60
-  companyName: DefaultCompany
+  companyName: Patrick Nicholson
   productName: CapstoneTour
   defaultCursor: {fileID: 0}
   cursorHotspot: {x: 0, y: 0}
@@ -847,7 +847,7 @@ PlayerSettings:
   m_RenderingPath: 1
   m_MobileRenderingPath: 1
   metroPackageName: CapstoneTour
-  metroPackageVersion: 
+  metroPackageVersion: 1.0.0.0
   metroCertificatePath: 
   metroCertificatePassword: 
   metroCertificateSubject: 
@@ -855,7 +855,7 @@ PlayerSettings:
   metroCertificateNotAfter: 0000000000000000
   metroApplicationDescription: CapstoneTour
   wsaImages: {}
-  metroTileShortName: 
+  metroTileShortName: CapstoneTour
   metroTileShowName: 0
   metroMediumTileShowName: 0
   metroLargeTileShowName: 0
