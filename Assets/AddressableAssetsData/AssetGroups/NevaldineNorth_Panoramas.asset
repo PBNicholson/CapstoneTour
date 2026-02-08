@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: NevaldineNorth_Panoramas
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: NevaldineNorth_Panoramas
+  m_GUID: 63623f5135293dd4782fe315d45d0e84
+  m_SerializeEntries:
+  - m_GUID: 543711c2148e4db439a323d0b3c22907
+    m_Address: lobby_main_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2a8c092972401d6469b2a9fc1a420a97, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a6325271c303c14448017fcdba6666b3, type: 2}
+    - {fileID: 11400000, guid: 46e29dc7e6e62a24a97ae7aa6b917f23, type: 2}

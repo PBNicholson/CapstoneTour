@@ -1,0 +1,21 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200ed3a42059ecf4fb09aa2fb702fff1, type: 3}
+  m_Name: NevaldineNorthTour
+  m_EditorClassIdentifier: Assembly-CSharp::TourData
+  buildingName: 
+  buildingThumbnail: {fileID: 0}
+  navigationRadius: 3
+  defaultStartNodeId: lobby_main
+  floors: 01000000
+  nodes:
+  - {fileID: 11400000, guid: 7c2b9e710cf15b147a6a0a50ba62215b, type: 2}
