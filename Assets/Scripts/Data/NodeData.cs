@@ -1,7 +1,17 @@
 
+using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
+
+/// <summary>
+/// Typed AssetReference for Cubemap textures. Required for Addressables to filter by Cubemap type in the picker.
+/// </summary>
+[System.Serializable]
+public class AssetReferenceCubemap : AssetReferenceT<Cubemap>
+{
+    public AssetReferenceCubemap(string guid) : base(guid) { }
+}
 
 /// <summary>
 /// Data container for a single panorama capture point within a tour.
@@ -29,7 +39,7 @@ public class NodeData : ScriptableObject
     [Header("Panorama")]
 
     [Tooltip("Panorama image for this location. Uses Addressables for lazy loading")]
-    public AssetReferenceTexture2D panoramaTexture;
+    public AssetReferenceCubemap panoramaTexture;
 
     [Tooltip("Default camera yaw (horizontal rotation) in degrees when arriving at this node. Range: 0-360.")]
     [Range(0f, 360f)]

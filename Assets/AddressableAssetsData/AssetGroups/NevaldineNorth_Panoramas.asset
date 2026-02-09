@@ -15,8 +15,13 @@ MonoBehaviour:
   m_GroupName: NevaldineNorth_Panoramas
   m_GUID: 63623f5135293dd4782fe315d45d0e84
   m_SerializeEntries:
-  - m_GUID: 543711c2148e4db439a323d0b3c22907
-    m_Address: lobby_main_pano
+  - m_GUID: 259d16324634d1946895b776fbdd20fb
+    m_Address: Lobby_02
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9391b01812846024b8885d8b31b30ea3
+    m_Address: Lobby_01
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

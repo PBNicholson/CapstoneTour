@@ -15,7 +15,7 @@ MonoBehaviour:
   buildingName: 
   buildingThumbnail: {fileID: 0}
   navigationRadius: 3
-  defaultStartNodeId: lobby_main
+  defaultStartNodeId: lobby01
   floors: 01000000
   nodes:
   - {fileID: 11400000, guid: 7c2b9e710cf15b147a6a0a50ba62215b, type: 2}
