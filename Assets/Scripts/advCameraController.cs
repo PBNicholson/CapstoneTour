@@ -1,3 +1,4 @@
+
 using UnityEngine;
 
 public class advCameraController : MonoBehaviour
@@ -68,4 +69,45 @@ public class advCameraController : MonoBehaviour
             lastMousePosition = Input.mousePosition;
         }
     }
+
+    #region Public API
+
+    /// <summary>
+    /// Sets the camera rotation to the specified yaw and pitch values.
+    /// Pitch is clamped to configured vertical angle limits.
+    /// Yaw is clamped to horizontal limits only if useHorizontalClamp is enabled.
+    /// </summary>
+    /// <param name="yaw">Horizontal rotation in degrees.</param>
+    /// <param name="pitch">Vertical rotation in degrees (Positive = looking down).</param>
+    public void SetRotation(float yaw, float pitch)
+    {
+        // Apply horizontal clamping if enabled
+        if (useHorizontalClamp)
+        {
+            horizontalRotation = Mathf.Clamp(yaw, minHorizontalAngle, minHorizontalAngle);
+        }
+        else
+        {
+            horizontalRotation = yaw;
+        }
+
+        // Always clamp pitch to vertical limits
+        verticalRotation = Mathf.Clamp(pitch, minVerticalAngle, maxVerticalAngle);
+
+        // Apply rotation to transform
+        transform.rotation = Quaternion.Euler(verticalRotation, horizontalRotation, 0f);
+    }
+
+    /// <summary>
+    /// Gets the current camera rotation values.
+    /// </summary>
+    /// <param name="yaw">Current horizontal rotation in degrees.</param>
+    /// <param name="pitch">Current vertical rotation in degrees.</param>
+    public void GetRotation(out float yaw, out float pitch)
+    {
+        yaw = horizontalRotation;
+        pitch = verticalRotation;
+    }
+
+    #endregion
 }

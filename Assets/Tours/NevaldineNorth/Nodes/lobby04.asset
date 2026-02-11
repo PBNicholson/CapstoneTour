@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c37c14788f6aee741b6c676fffa6a888, type: 3}
-  m_Name: lobby02
+  m_Name: lobby04
   m_EditorClassIdentifier: Assembly-CSharp::NodeData
-  id: lobby02
+  id: lobby04
   displayName: Main Lobby
   position: {x: 0, y: 0, z: 0}
   floor: 1
   panoramaTexture:
-    m_AssetGUID: 259d16324634d1946895b776fbdd20fb
+    m_AssetGUID: 543711c2148e4db439a323d0b3c22907
     m_SubObjectName: 
     m_SubObjectType: 
     m_SubObjectGUID: 

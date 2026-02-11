@@ -12,10 +12,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 200ed3a42059ecf4fb09aa2fb702fff1, type: 3}
   m_Name: NevaldineNorthTour
   m_EditorClassIdentifier: Assembly-CSharp::TourData
-  buildingName: 
+  buildingName: Nevaldine North
   buildingThumbnail: {fileID: 0}
   navigationRadius: 3
   defaultStartNodeId: lobby01
   floors: 01000000
   nodes:
   - {fileID: 11400000, guid: 7c2b9e710cf15b147a6a0a50ba62215b, type: 2}
+  - {fileID: 11400000, guid: f2e39b2adc51b6c4c95dbe87fc39e898, type: 2}
+  - {fileID: 11400000, guid: c4305298908561b4bb8c57284ec835c4, type: 2}
+  - {fileID: 11400000, guid: d906eec2e614b5b44a98f41700d365ff, type: 2}
+  - {fileID: 11400000, guid: 4ed2d9d3f86dcbb4baca5629ef124b20, type: 2}
+  - {fileID: 11400000, guid: a8c2f7e840350f94980153d1d9a1bc82, type: 2}

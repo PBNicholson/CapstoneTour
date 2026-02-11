@@ -107,9 +107,15 @@ public class PanoramaRenderer : MonoBehaviour
         _loadingHandle.Completed += OnCubemapLoadCompleted;
     }
 
-    public void LoadPanorama(AssetReferenceCubemap CubemapReference)
+    /// <summary>
+    /// Loads and displays a panorama cubemap directly from an AssetReference.
+    /// Useful for testing or cases where a full NodeData isn't available.
+    /// OnPanoramaLoaded will fire with null NodeData parameter.
+    /// </summary>
+    /// <param name="CubemapReference">Addressable reference to the panorama cubemap</param>
+    public void LoadPanorama(AssetReferenceCubemap cubemapReference)
     {
-        if (CubemapReference == null || !CubemapReference.RuntimeKeyIsValid())
+        if (cubemapReference == null || !cubemapReference.RuntimeKeyIsValid())
         {
             Debug.LogWarning($"[PanoramaRenderer] LoadPanorama called with invalid texture reference.");
             return;
@@ -120,7 +126,7 @@ public class PanoramaRenderer : MonoBehaviour
         _pendingNode = null;
         isLoading = true;
 
-        _loadingHandle = CubemapReference.LoadAssetAsync<Cubemap>();
+        _loadingHandle = cubemapReference.LoadAssetAsync<Cubemap>();
         _hasLoadingHandle = true;
         _loadingHandle.Completed += OnCubemapLoadCompleted;
     }
