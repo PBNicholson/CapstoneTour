@@ -2,6 +2,10 @@
 using System;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 /// <summary>
 /// Orchestrates tour state and coordinates between PanoramaRenderer, camera, and UI systems.
 /// Handles tour initialization, node navigation, and runtime tour switching.
@@ -142,6 +146,9 @@ public class TourManager : MonoBehaviour
         // Update floor and fire event if changed
         UpdateFloor(node.floor);
 
+        // Move camera to node position
+        MoveCameraToNode(node);
+
         // Delegate panorama loading to renderer
         panoramaRenderer.LoadPanorama(node);
 
@@ -277,6 +284,8 @@ public class TourManager : MonoBehaviour
             Debug.Log($"[TourManager] Camera rotation set to yaw: {startNode.initialRotation}, pitch:0.");
         }
 
+        MoveCameraToNode(startNode);
+
         // Load panorama
         panoramaRenderer.LoadPanorama(startNode);
 
@@ -305,6 +314,21 @@ public class TourManager : MonoBehaviour
         }
 
         return false;
+    }
+
+    /// <summary>
+    /// Moves the camera to the world position of the given node.
+    /// Called on every navigation to keep the camera origin consistent with
+    /// the panorama capture point, which ensures raycasts originate from the
+    /// correct position and node gizmos remain spatially accurate.
+    /// </summary>
+    private void MoveCameraToNode(NodeData node)
+    {
+        if (cameraController == null)
+            return;
+
+        cameraController.transform.position = node.position;
+        Debug.Log($"[TourManager] Camera moved to node position {node.position}.");
     }
 
     #endregion
@@ -348,7 +372,6 @@ public class TourManager : MonoBehaviour
         Debug.Log($"  Tour: {(tour != null ? tour.buildingName : "None")}");
         Debug.Log($"  Node: {(CurrentNode != null ? $"{CurrentNode.id} ({CurrentNode.displayName})" : "None")}");
         Debug.Log($"  Floor: {CurrentFloor}");
-        Debug.Log($"  IsTransitioning: {IsTransitioning}");
 
         if (cameraController != null)
         {
@@ -370,6 +393,45 @@ public class TourManager : MonoBehaviour
 
         return 0;
     }
+
+    #endregion
+
+    #region Gizmos
+
+#if UNITY_EDITOR
+
+    private void OnDrawGizmosSelected()
+    {
+        // Only draw if we have tour data with nodes
+        if (tour == null || tour.nodes == null || tour.nodes.Count == 0)
+            return;
+
+        for (int i = 0; i < tour.nodes.Count; i++)
+        {
+            NodeData node = tour.nodes[i];
+            if (node == null)
+                continue;
+
+            bool isCurrent = (CurrentNode != null && CurrentNode == node);
+            Gizmos.color = isCurrent ? Color.yellow : Color.cyan;
+            Gizmos.DrawSphere(node.position, 0.15f);
+            Gizmos.color = new Color(Gizmos.color.r, Gizmos.color.g, Gizmos.color.b, 0.3f);
+            Gizmos.DrawWireSphere(node.position, tour.navigationRadius);
+
+            GUIStyle labelStyle = new GUIStyle();
+            labelStyle.normal.textColor = isCurrent ? Color.yellow : Color.white;
+            labelStyle.fontSize = 11;
+            labelStyle.fontStyle = isCurrent ? FontStyle.Bold : FontStyle.Normal;
+
+            string label = string.IsNullOrEmpty(node.displayName)
+                ? node.id : $"{node.id}\n{node.displayName}";
+
+            Vector3 labelPos = node.position + Vector3.up * 0.35f;
+            Handles.Label(labelPos, label, labelStyle);
+        }
+    }
+
+#endif
 
     #endregion
 }

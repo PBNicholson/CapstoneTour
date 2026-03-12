@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::NodeData
   id: lobby06
   displayName: Main Lobby
-  position: {x: 0, y: 0, z: 0}
+  position: {x: -8, y: 0, z: -16}
   floor: 1
   panoramaTexture:
     m_AssetGUID: b0af116c42478b243bf555121b27db06
