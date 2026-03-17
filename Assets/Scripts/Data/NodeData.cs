@@ -1,5 +1,4 @@
 
-using JetBrains.Annotations;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.AddressableAssets;
@@ -41,9 +40,10 @@ public class NodeData : ScriptableObject
     [Tooltip("Panorama image for this location. Uses Addressables for lazy loading")]
     public AssetReferenceCubemap panoramaTexture;
 
-    [Tooltip("Default camera yaw (horizontal rotation) in degrees when arriving at this node. Range: 0-360.")]
+    [Tooltip("Rotational offset applied to the skybox material for this node's panorama. " +
+             "Use to align the panorama image with building's spatial layout. Range: 0-360.")]
     [Range(0f, 360f)]
-    public float initialRotation;
+    public float panoramaRotation;
 
     [Header("Points of Interest")]
 

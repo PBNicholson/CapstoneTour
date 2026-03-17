@@ -18,6 +18,9 @@ public class PanoramaRenderer : MonoBehaviour
     [Tooltip("Shader property name for the panorama texture. Default works with Unity's Skybox/Panoramic shader.")]
     [SerializeField] private string texturePropertyName = "_Tex";
 
+    [Tooltip("Shader property name for the panorama rotation. Default works with Unity's Skybox/Cubemap shader.")]
+    [SerializeField] private string rotationPropertyName = "_Rotation";
+
     [Header("Testing")]
 
     [Tooltip("Test node for ContextMenu validation.")]
@@ -202,7 +205,8 @@ public class PanoramaRenderer : MonoBehaviour
         ReleaseActiveHandle();
 
         // Apply the new cubemap
-        ApplyCubemap(handle.Result);
+        float rotation = _pendingNode != null ? _pendingNode.panoramaRotation : 0f;
+        ApplyCubemap(handle.Result, rotation);
 
         // Promote loading handle to active handle
         _activeHandle = handle;
@@ -217,7 +221,7 @@ public class PanoramaRenderer : MonoBehaviour
         OnPanoramaLoaded?.Invoke(loadedNode);
     }
 
-    private void ApplyCubemap(Cubemap cubemap)
+    private void ApplyCubemap(Cubemap cubemap, float rotation = 0f)
     {
         if (_runtimeMaterial == null)
         {
@@ -226,6 +230,7 @@ public class PanoramaRenderer : MonoBehaviour
         }
 
         _runtimeMaterial.SetTexture(texturePropertyName, cubemap);
+        _runtimeMaterial.SetFloat(rotationPropertyName, rotation);
     }
 
     private void CancelLoadingOperation()

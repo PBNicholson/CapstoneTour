@@ -17,6 +17,11 @@ public class TourData : ScriptableObject
     [Tooltip("Optional thumbnail image for tour selection UI.")]
     public Sprite buildingThumbnail;
 
+    [Tooltip("Clockwise rotation in degrees from the world +Z axis to true north for this building. " +
+             "Applied globally by the compass. Individual panorama alignment is handled by NodeData.panoramaRotation.")]
+    [Range(0f, 360f)]
+    public float northOffset;
+
     [Header("Navigation Configuration")]
 
     [Tooltip("Maximum horizontal distance (in meters) for considering a node as a navigation candidate.")]

@@ -25,7 +25,7 @@ public class TourManager : MonoBehaviour
     [SerializeField] private PanoramaRenderer panoramaRenderer;
 
     [Tooltip("Reference to the camera controller for applying rotation on tour start.")]
-    [SerializeField] private advCameraController cameraController;
+    [SerializeField] private CameraController cameraController;
 
     #endregion
 
@@ -216,9 +216,6 @@ public class TourManager : MonoBehaviour
         OnTourChanged?.Invoke(newTour);
 
         Debug.Log($"[TourManager] Loaded tour '{newTour.buildingName}'.");
-
-        // Navigate tot start node with rotation reset
-        NavigateToStartNode(startNode, applyRotation: true);
     }
 
     #endregion
@@ -252,16 +249,14 @@ public class TourManager : MonoBehaviour
         OnTourChanged?.Invoke(tour);
 
         Debug.Log($"[TourManager] Initializing tour '{tour.buildingName}' at node '{startNode.id}'.");
-
-        // Navigate to start node with rotation applied
-        NavigateToStartNode(startNode, applyRotation: true);
+        NavigateToStartNode(startNode);
     }
 
     /// <summary>
     /// Navigates to a start node, optionally applying its initial rotation.
     /// Used for tour initialization and tour switching.
     /// </summary>
-    private void NavigateToStartNode(NodeData startNode, bool applyRotation)
+    private void NavigateToStartNode(NodeData startNode)
     {
         // Update state
         CurrentNode = startNode;
@@ -274,14 +269,6 @@ public class TourManager : MonoBehaviour
         if (previousFloor != _cachedFloor || previousFloor == 0)
         {
             OnFloorChanged?.Invoke(_cachedFloor);
-        }
-
-        // Apply initial rotation if requested
-        if (applyRotation && cameraController != null)
-        {
-            // Set yaw to node's initial rotation, pitch to 0 (level horizon)
-            cameraController.SetRotation(startNode.initialRotation, 0f);
-            Debug.Log($"[TourManager] Camera rotation set to yaw: {startNode.initialRotation}, pitch:0.");
         }
 
         MoveCameraToNode(startNode);
@@ -428,6 +415,63 @@ public class TourManager : MonoBehaviour
 
             Vector3 labelPos = node.position + Vector3.up * 0.35f;
             Handles.Label(labelPos, label, labelStyle);
+        }
+
+        // --- POI gizmos ---
+        // Orange: normal POI marker
+        // Red: degenerate (worldPosition at or within 0.001m of the node, likely unset)
+        Color poiOrange = new Color(1f, 0.5f, 0f, 1f);
+        Color poiOrangeFade = new Color(1f, 0.5f, 0f, 0.35f);
+        Color poiRed = new Color(1f, 0.15f, 0.15f, 1f);
+        Color poiRedFade = new Color(1f, 0.15f, 0.15f, 0.35f);
+
+        for (int i = 0; i < tour.nodes.Count; i++)
+        {
+            NodeData node = tour.nodes[i];
+            if (node == null || node.pointsOfInterest == null)
+                continue;
+
+            for (int j = 0; j < node.pointsOfInterest.Count; j++)
+            {
+                POIData poi = node.pointsOfInterest[j];
+                if (poi == null)
+                    continue;
+
+                if (!poi.showGizmos)
+                    continue;
+
+                float dist = (poi.worldPosition - node.position).magnitude;
+                bool isDegenerate = dist < 0.001f;
+                bool isUnset = poi.worldPosition == Vector3.zero;
+
+                Color lineColor = isDegenerate ? poiRed : poiOrange;
+                Color sphereColor = isDegenerate ? poiRedFade : poiOrangeFade;
+
+                // Line from node to POI
+                Handles.color = lineColor;
+                if (isUnset)
+                    Handles.DrawDottedLine(node.position, poi.worldPosition, 4f);
+                else
+                    Handles.DrawLine(node.position, poi.worldPosition, 2f);
+
+                // Sphere at POI world position
+                Gizmos.color = sphereColor;
+                Gizmos.DrawSphere(poi.worldPosition, 0.1f);
+                Gizmos.color = lineColor;
+                Gizmos.DrawWireSphere(poi.worldPosition, 0.1f);
+
+                // Label
+                string poiLabel = string.IsNullOrEmpty(poi.label) ? poi.name : poi.label;
+                if (isDegenerate) poiLabel += "\nWarning: too close to node";
+                else if (isUnset) poiLabel += "\nWarning: worldPosition not set";
+
+                GUIStyle poiStyle = new GUIStyle();
+                poiStyle.normal.textColor = lineColor;
+                poiStyle.fontSize = 10;
+                poiStyle.fontStyle = FontStyle.Italic;
+
+                Handles.Label(poi.worldPosition + Vector3.up * 0.25f, poiLabel, poiStyle);
+            }
         }
     }
 
