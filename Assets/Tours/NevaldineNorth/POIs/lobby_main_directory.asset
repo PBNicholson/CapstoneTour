@@ -12,8 +12,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f1cb69f93a192c8408829ed2aa125e7d, type: 3}
   m_Name: lobby_main_directory
   m_EditorClassIdentifier: Assembly-CSharp::POIData
-  label: Building Directory
-  description: Main building directory showing room numbers and departments.
+  worldPosition: {x: -4, y: 0, z: -8}
+  showGizmos: 1
+  label: Test POI
+  description: Test
   image:
     m_AssetGUID: 
     m_SubObjectName: 
