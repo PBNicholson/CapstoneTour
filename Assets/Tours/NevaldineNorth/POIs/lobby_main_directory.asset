@@ -23,5 +23,5 @@ MonoBehaviour:
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
   interactionType: 1
-  externalUrl: 
-  targetNodeId: 
+  externalUrl: https://www.google.com/
+  targetNodeId: lobby06

@@ -14,7 +14,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
   m_GroupName: Default Local Group
   m_GUID: e0eaecf6f53a8c1409187b90c8167101
-  m_SerializeEntries: []
+  m_SerializeEntries:
+  - m_GUID: 8ea912b96285ae34aa5aab96283b58a8
+    m_Address: Assets/UI Assets/Placeholders/North_placeholder 1.png
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   m_ReadOnly: 0
   m_Settings: {fileID: 11400000, guid: 2a8c092972401d6469b2a9fc1a420a97, type: 2}
   m_SchemaSet:
