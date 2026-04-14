@@ -25,3 +25,4 @@ MonoBehaviour:
   panoramaRotation: 0
   pointsOfInterest:
   - {fileID: 11400000, guid: e7e86d075d3748940b7f0efef777c884, type: 2}
+  - {fileID: 11400000, guid: 196e2d209dab7944c821bf866f484a50, type: 2}

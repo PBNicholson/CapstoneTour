@@ -22,5 +22,6 @@ MonoBehaviour:
     m_SubObjectType: 
     m_SubObjectGUID: 
     m_EditorAssetChanged: 0
-  initialRotation: 0
-  pointsOfInterest: []
+  panoramaRotation: 0
+  pointsOfInterest:
+  - {fileID: 11400000, guid: e7e86d075d3748940b7f0efef777c884, type: 2}
