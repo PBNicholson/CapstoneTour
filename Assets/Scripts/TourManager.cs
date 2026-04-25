@@ -8,16 +8,11 @@ using UnityEditor;
 
 /// <summary>
 /// Orchestrates tour state and coordinates between PanoramaRenderer, camera, and UI systems.
-/// Handles tour initialization, node navigation, and runtime tour switching.
+/// Handles tour loading, unloading, and node navigation.
 /// </summary>
 public class TourManager : MonoBehaviour
 {
     #region Serialized Fields
-
-    [Header("Tour Configuration")]
-
-    [Tooltip("The active tour data. Can be assigned in Inspector or switched at runtime via LoadTour().")]
-    [SerializeField] private TourData tour;
 
     [Header("System References")]
 
@@ -27,9 +22,19 @@ public class TourManager : MonoBehaviour
     [Tooltip("Reference to the camera controller for applying rotation on tour start.")]
     [SerializeField] private CameraController cameraController;
 
+    [Header("Editor Preview")]
+
+    [Tooltip("Tour used for drawing node gizmos in the Scene view while authoring " +
+             "Has no effect at runtime - the actively loaded tour always takes precedence. " +
+             "Leave unassigned in production scenes; assign only while designing a specific tour's node layout.")]
+    [SerializeField] private TourData editorPreviewTour;
+
     #endregion
 
     #region State
+
+    private TourData tour;
+    private int _cachedFloor = int.MinValue;
 
     /// <summary>
     /// The currently active tour data.
@@ -45,8 +50,6 @@ public class TourManager : MonoBehaviour
     /// The floor number of the current node. Falls back to last known floor if CurrentNode is null.
     /// </summary>
     public int CurrentFloor => _cachedFloor;
-
-    private int _cachedFloor;
 
     public bool IsTransitioning
     {
@@ -89,18 +92,6 @@ public class TourManager : MonoBehaviour
     private void Awake()
     {
         ValidateReferences();
-    }
-
-    private void Start()
-    {
-        if (tour != null)
-        {
-            InitializeTour();
-        }
-        else
-        {
-            Debug.LogWarning("[TourManager] No TourData assigned. Call LoadTour() to start a tour.");
-        }
     }
 
     #endregion
@@ -190,9 +181,9 @@ public class TourManager : MonoBehaviour
 
     /// <summary>
     /// Loads a new tour at runtime. replacing the current tour.
-    /// Navigates to the new tour's default start node and applies its initial rotation.
+    /// Replaces any currently loaded tour - no explicit unload is required
     /// </summary>
-    /// <param name="newTour">The tour to load.</param>
+    /// <param name="newTour">The tour to load. Must have a valid defaultStartNodeId.</param>
     public void LoadTour(TourData newTour)
     {
         if (newTour == null)
@@ -209,13 +200,42 @@ public class TourManager : MonoBehaviour
             return;
         }
 
+        if (tour == newTour)
+        {
+            return;
+        }
+
         // Update tour reference
         tour = newTour;
 
         // Fire tour changed event
         OnTourChanged?.Invoke(newTour);
 
-        Debug.Log($"[TourManager] Loaded tour '{newTour.buildingName}'.");
+        NavigateToStartNode(startNode);
+
+        Debug.Log($"[TourManager] Loaded tour '{newTour.buildingName}' at node '{startNode.id}'.");
+    }
+
+    /// <summary>
+    /// Unloads the current tour, clearing the skybox and resetting node/floor state.
+    /// </summary>
+    public void UnloadTour()
+    {
+        if (tour == null)
+            return;
+
+        string unloadedName = tour.buildingName;
+
+        panoramaRenderer.ClearSkybox();
+
+        CurrentNode = null;
+        tour = null;
+        _cachedFloor = int.MinValue;
+
+        OnTourChanged?.Invoke(null);
+        OnNodeChanged?.Invoke(null);
+
+        Debug.Log($"[TourManager] Unloaded tour '{unloadedName}'.");
     }
 
     #endregion
@@ -235,26 +255,8 @@ public class TourManager : MonoBehaviour
         }
     }
 
-    private void InitializeTour()
-    {
-        NodeData startNode = tour.GetStartNode();
-
-        if (startNode == null)
-        {
-            Debug.LogError($"[TourManager] Tour ' {tour.buildingName}' has invalid defaultStartNodeId '{tour.defaultStartNodeId}'.");
-            return;
-        }
-
-        // Fire tour changed event for initial load
-        OnTourChanged?.Invoke(tour);
-
-        Debug.Log($"[TourManager] Initializing tour '{tour.buildingName}' at node '{startNode.id}'.");
-        NavigateToStartNode(startNode);
-    }
-
     /// <summary>
-    /// Navigates to a start node, optionally applying its initial rotation.
-    /// Used for tour initialization and tour switching.
+    /// Navigates to a start node. Used by LoadTour during tour initialization.
     /// </summary>
     private void NavigateToStartNode(NodeData startNode)
     {
@@ -266,7 +268,7 @@ public class TourManager : MonoBehaviour
         _cachedFloor = startNode.floor;
 
         // Fire floor changed if this isn't the first load or floor differs
-        if (previousFloor != _cachedFloor || previousFloor == 0)
+        if (previousFloor != _cachedFloor || previousFloor == int.MinValue)
         {
             OnFloorChanged?.Invoke(_cachedFloor);
         }
@@ -389,13 +391,15 @@ public class TourManager : MonoBehaviour
 
     private void OnDrawGizmosSelected()
     {
+        TourData gizmoTour = tour != null ? tour : editorPreviewTour;
+
         // Only draw if we have tour data with nodes
-        if (tour == null || tour.nodes == null || tour.nodes.Count == 0)
+        if (gizmoTour == null || gizmoTour.nodes == null || gizmoTour.nodes.Count == 0)
             return;
 
-        for (int i = 0; i < tour.nodes.Count; i++)
+        for (int i = 0; i < gizmoTour.nodes.Count; i++)
         {
-            NodeData node = tour.nodes[i];
+            NodeData node = gizmoTour.nodes[i];
             if (node == null)
                 continue;
 
@@ -403,7 +407,7 @@ public class TourManager : MonoBehaviour
             Gizmos.color = isCurrent ? Color.yellow : Color.cyan;
             Gizmos.DrawSphere(node.position, 0.15f);
             Gizmos.color = new Color(Gizmos.color.r, Gizmos.color.g, Gizmos.color.b, 0.3f);
-            Gizmos.DrawWireSphere(node.position, tour.navigationRadius);
+            Gizmos.DrawWireSphere(node.position, gizmoTour.navigationRadius);
 
             GUIStyle labelStyle = new GUIStyle();
             labelStyle.normal.textColor = isCurrent ? Color.yellow : Color.white;
@@ -425,9 +429,9 @@ public class TourManager : MonoBehaviour
         Color poiRed = new Color(1f, 0.15f, 0.15f, 1f);
         Color poiRedFade = new Color(1f, 0.15f, 0.15f, 0.35f);
 
-        for (int i = 0; i < tour.nodes.Count; i++)
+        for (int i = 0; i < gizmoTour.nodes.Count; i++)
         {
-            NodeData node = tour.nodes[i];
+            NodeData node = gizmoTour.nodes[i];
             if (node == null || node.pointsOfInterest == null)
                 continue;
 

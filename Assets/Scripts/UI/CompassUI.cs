@@ -30,6 +30,7 @@ public class CompassUI : MonoBehaviour
     // Cached panorama rotation for the current node, updated on node change.
     private float _panoramaRotation;
 
+    // Cached northOffset for the current tour, updated on tour change.
     private float _tourNorthOffset;
 
     private bool _isReady;
@@ -49,6 +50,7 @@ public class CompassUI : MonoBehaviour
             return;
 
         tourManager.OnNodeChanged += HandleNodeChanged;
+        tourManager.OnTourChanged += HandleTourChanged;
 
         if (tourManager.CurrentTour != null)
         {
@@ -111,7 +113,7 @@ public class CompassUI : MonoBehaviour
 
     private void HandleTourChanged(TourData newTour)
     {
-        if ( (newTour != null))
+        if (newTour != null)
         {
             _tourNorthOffset = newTour.northOffset;
         }

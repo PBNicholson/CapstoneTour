@@ -22,6 +22,13 @@ public class TourData : ScriptableObject
     [Range(0f, 360f)]
     public float northOffset;
 
+    [Header("Display")]
+
+    [Tooltip("Long-form description shown in the menu detail panel when this tour is selected. " +
+             "Supports multiple lines.")]
+    [TextArea(3, 6)]
+    public string description;
+
     [Header("Navigation Configuration")]
 
     [Tooltip("Maximum horizontal distance (in meters) for considering a node as a navigation candidate.")]
