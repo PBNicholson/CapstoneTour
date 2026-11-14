@@ -1,0 +1,56 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 200ed3a42059ecf4fb09aa2fb702fff1, type: 3}
+  m_Name: Wicks_200Tour
+  m_EditorClassIdentifier: Assembly-CSharp::TourData
+  buildingName: Wicks_200
+  buildingThumbnail: {fileID: 0}
+  northOffset: 0
+  description: 
+  navigationRadius: 3
+  defaultStartNodeId: wicks200_hallway_01
+  floors: 01000000
+  nodes:
+  - {fileID: 11400000, guid: 4c1e29a19f45dcc44a58d844553f6515, type: 2}
+  - {fileID: 11400000, guid: 7a86ab0ac0cee1e428f1fedb82966f71, type: 2}
+  - {fileID: 11400000, guid: ec4d217e60b1f9649bff181dddbced12, type: 2}
+  - {fileID: 11400000, guid: 98757b8b0f4ae0b42a24580cabd10a4b, type: 2}
+  - {fileID: 11400000, guid: c98b09ca5cf26a544a88b868783ef21f, type: 2}
+  - {fileID: 11400000, guid: 0e354ef168fd44b42859aa2ea3932326, type: 2}
+  - {fileID: 11400000, guid: 570af61f35359db49b3e5d59bf1e63a7, type: 2}
+  - {fileID: 11400000, guid: ff65998308c539340982e88b52c8a637, type: 2}
+  - {fileID: 11400000, guid: c80602f5ada76f145a0defea3e9525c7, type: 2}
+  - {fileID: 11400000, guid: 3ebbfb1d1bab98a47973c5aa936e5624, type: 2}
+  - {fileID: 11400000, guid: 7c7fb49a19208e243bf87b7e9d83793c, type: 2}
+  - {fileID: 11400000, guid: a9df10f244ed6fe41915995db4140176, type: 2}
+  - {fileID: 11400000, guid: b882a922642926045839f6c26a92111b, type: 2}
+  - {fileID: 11400000, guid: ee05325f5fe49a14c849d16f3e59bab7, type: 2}
+  - {fileID: 11400000, guid: 681d099f72844764390c7f7982059aa6, type: 2}
+  - {fileID: 11400000, guid: 3acab900f28c04c4d9258cf5a9fe853b, type: 2}
+  - {fileID: 11400000, guid: 64c3ead6468e8674a830d7c3408d26e8, type: 2}
+  - {fileID: 11400000, guid: 233dd610a50dff7429232885e40f8329, type: 2}
+  - {fileID: 11400000, guid: a4c7a2d511f7df347aab1dd3302b7ab0, type: 2}
+  - {fileID: 11400000, guid: 40e2bd771e111bc47a018a5ac67ad317, type: 2}
+  - {fileID: 11400000, guid: b0755affb448a5b4ea8f8b6e63338f8c, type: 2}
+  - {fileID: 11400000, guid: f4b2b82317deb05489a9ee7b5571d40a, type: 2}
+  - {fileID: 11400000, guid: 8a882ea7aa7f37a4d95a03620160af22, type: 2}
+  - {fileID: 11400000, guid: 9811d36c9cdb3084887a14e12b808dcc, type: 2}
+  - {fileID: 11400000, guid: 2679f6639d2d60b4ab41b767627b7c73, type: 2}
+  - {fileID: 11400000, guid: 8ed56fe95b317574890462c85fdb2197, type: 2}
+  - {fileID: 11400000, guid: c51c8896f59e8a3468ffb5dc98cde870, type: 2}
+  - {fileID: 11400000, guid: e72e1a54f2823fa42a01fb84a338b488, type: 2}
+  - {fileID: 11400000, guid: 05d8f3efc3a75644c9eb13c7dd5b790a, type: 2}
+  - {fileID: 11400000, guid: 286c1166c64a9104bab99fab212d285c, type: 2}
+  - {fileID: 11400000, guid: 4832d17b78ea9db46bc355a56a31bed7, type: 2}
+  - {fileID: 11400000, guid: c6fb02f4f24270a45a34d62263dd7b2f, type: 2}
+  - {fileID: 11400000, guid: 3efcfc8a896fc4649bfdd4dcaa30fffb, type: 2}
+  - {fileID: 11400000, guid: 27ebbba3322892c438a3555277f0029b, type: 2}

@@ -61,9 +61,14 @@ MonoBehaviour:
   m_overridePlayerVersion: 
   m_GroupAssets:
   - {fileID: 11400000, guid: 4f9b22fc9da550e498f2f70571c8953c, type: 2}
-  - {fileID: 11400000, guid: 76aa874091b68c640af64057548eb53c, type: 2}
-  - {fileID: 11400000, guid: cb39b78bd9dcb23469978deb2fd28251, type: 2}
+  - {fileID: 11400000, guid: ff65d8a5716201d49bc0a038dc09e070, type: 2}
+  - {fileID: 11400000, guid: 338c82c1c62417947b732103812988e7, type: 2}
+  - {fileID: 11400000, guid: f2fb53571b7590942aa843142759e82d, type: 2}
+  - {fileID: 11400000, guid: 393efff78fa14764b914336330f2b653, type: 2}
+  - {fileID: 11400000, guid: 5d57c399e9b79d448b85f42f13e43f2e, type: 2}
   - {fileID: 11400000, guid: 5618e8e769297d147b41617b5158850a, type: 2}
+  - {fileID: 11400000, guid: 530e17a3ebafd0b47aef7483c12d0f85, type: 2}
+  - {fileID: 11400000, guid: 03b90fb1374ca5d4991fe5d71e3fb110, type: 2}
   m_BuildSettings:
     m_LogResourceManagerExceptions: 1
     m_BundleBuildPath: Temp/com.unity.addressables/AssetBundles

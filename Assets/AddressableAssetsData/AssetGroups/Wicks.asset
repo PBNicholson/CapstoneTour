@@ -1,0 +1,273 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Wicks
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Wicks
+  m_GUID: e2d44964521862f4a90b76c73afd01d8
+  m_SerializeEntries:
+  - m_GUID: 062ad61ea42072d4c81f20bd53501b4c
+    m_Address: wicks100_corridor_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0c6396e2fb713404e9a1b7c6e3adc019
+    m_Address: wicks100_hallway_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 102a93fa0919c024cb558570fc3c2c37
+    m_Address: wicks100_lab_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14a559296d4ad20459faa23abd6cfef9
+    m_Address: wicks100_lab_12_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 16983b3add2c0a341a6258b887ec3857
+    m_Address: wicks100_hallway_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 222894d4f39c93c45bbd35a60637e4b3
+    m_Address: wicks100_hallway_12_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28aa168f2358c8e469b2106d3677ce98
+    m_Address: wicks100_lab_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2bf4d946100436b4e80d4f2d9f51290d
+    m_Address: wicks100_lab_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cc3aa8c24599ac4f855ae83b47660fb
+    m_Address: wicks100_lab_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 40532642484177c4ea93889eb88e6e31
+    m_Address: wicks100_lab_21_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42644e7ed900a90449ee8e01dc7433d1
+    m_Address: wicks100_hallway_15_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 42f6912a5379a35498e928d1e9398080
+    m_Address: wicks100_hallway_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 438b02f8d8450ae4f8ac9e6c141bd7c6
+    m_Address: wicks100_lab_16_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4e09324f03de09241b0e6ab5e0a79a91
+    m_Address: wicks100_corridor_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 50743f878a430544d841a1ef8bfad99e
+    m_Address: wicks100_lab_14_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57022731bcd679f46b13fc121f482955
+    m_Address: wicks100_lab_20_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58dc297e7290beb4b8b64e82e959d7d1
+    m_Address: wicks100_lab_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5ede844a652c246409978956bfca51e1
+    m_Address: wicks100_lab_15_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 626ea7b99f28ad143b03eeb5bb52b0c7
+    m_Address: wicks100_lab_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a0ac0bfa2c65494ea42ae430a4dd7b9
+    m_Address: wicks100_lab_19_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 763885c872158e74f8cb249482f530ba
+    m_Address: wicks100_hallway_17_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 790b941c765f9cd4ea7e7bbf326b091e
+    m_Address: wicks100_hallway_16_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 79879e7d39c286d49b0a701fae635d89
+    m_Address: wicks100_hallway_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c237ced507ed2a48aaaad53c5a7f426
+    m_Address: wicks100_corridor_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fe1492b3c9655541b54c829bf9bcdc9
+    m_Address: wicks100_corridor_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 86b3a8cf7a38e3947a7c5d0ad112ad18
+    m_Address: wicks100_hallway_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9092fc88dc55fe443a56192c2db4e4c7
+    m_Address: wicks100_corridor_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 97163aa146564e3428d2279ab80987fd
+    m_Address: wicks100_lab_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ac38b8131d55674ca4c7d5fcaa702d0
+    m_Address: wicks100_corridor_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9e16bbb7a1affe14998168085cfa3af7
+    m_Address: wicks100_lab_13_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fe14380e0d1829469c0f769e6bc1040
+    m_Address: wicks100_hallway_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a092422bce649ec45bcc615f6bc9cf1a
+    m_Address: wicks100_lab_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a34939f5ddd5dec4d810a2a9964ae185
+    m_Address: wicks100_hallway_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a8913d862d3cdb7469b14d5e815da2ef
+    m_Address: wicks100_corridor_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b3c5a5ffe535b734a8ef593df110dc79
+    m_Address: wicks100_hallway_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b5ddbede04bfd244e8150299abb5bc6f
+    m_Address: wicks100_hallway_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b9f54cb6ec6609049bf1e42f27de59ae
+    m_Address: wicks100_lab_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0393e23d21ff6e46a7bb7b6378f9535
+    m_Address: wicks100_hallway_14_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c4e0ae8108be1f04bbf3f13cbfea2583
+    m_Address: wicks100_hallway_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c69f84194bf7d914aba9da347d33d54b
+    m_Address: wicks100_entrance_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c83e3cb0e312fc14db8eb19f7d655fb6
+    m_Address: wicks100_lab_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d06eed56fe9565b44b1496e1c238e5a0
+    m_Address: wicks100_hallway_13_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8f9305499d2d0c4d94066aa010ea049
+    m_Address: wicks100_corridor_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da2685188010446418dca07e2877044d
+    m_Address: wicks100_entrance_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: df6d4b96aef6e9540994160f7e5e2bff
+    m_Address: wicks100_corridor_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: dfe4cec0f4751a3419a92a6995f9f950
+    m_Address: wicks100_lab_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea2c72ad7397c734ca91a64fce1933d6
+    m_Address: wicks100_lab_18_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f42298bfd7b03e041b86bf2b03b9d981
+    m_Address: wicks100_hallway_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f93d7a2d6eb08d1499f21bd6170ed8f1
+    m_Address: wicks100_hallway_18_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ffa5ac843d68c4d4393b5d4aea2f36c6
+    m_Address: wicks100_lab_17_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2a8c092972401d6469b2a9fc1a420a97, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 20f6cad61f27ad74ca2f5d0c879d785d, type: 2}
+    - {fileID: 11400000, guid: 93454787e67bbac4d9a2213065bdd8b2, type: 2}

@@ -1,0 +1,533 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: Cook
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: Cook
+  m_GUID: 4b0ecf74b4a09804bb5813237d2dcffa
+  m_SerializeEntries:
+  - m_GUID: 01548f9536bf9e246a9d80fe27ee7f93
+    m_Address: cook100_echall_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 020c82bd3d4df3146a4bd64c83d88f93
+    m_Address: cook100_lobby_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0786e3347cde11f40a87428f19d7d940
+    m_Address: cook100_fshall_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 09df1544c6ee30041b89b787c59aef13
+    m_Address: cook100_ecroom_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ab8d87de76992a4bacc6585883705d6
+    m_Address: cook100_lobby2_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0b3896db894050d4eb4e2ebbae0b39b6
+    m_Address: cook100_fshall_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ddf8852bc7bbca4bb3cd1878bc3b8af
+    m_Address: cook100_library_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0f6bbeeb8e77ea848bc7bb696ba2d14b
+    m_Address: cook100_fshall_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 14e7a7527e86d8744b29c862705e0140
+    m_Address: cook100_hallway_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 17c1b6bc2df0ccc4aaa9742aadb96272
+    m_Address: cook100_ectc_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1b8c98d56ca05c749a8e487573b5830e
+    m_Address: cook100_ecroom_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1d0786a2044cbac498acf86553f6e325
+    m_Address: cook100_materials_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22bf47f620cd5b64c95e4c76cc1c021c
+    m_Address: cook100_lobby_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 260151c63e8c4114da7cf064bd279009
+    m_Address: cook100_hallway_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2a477c06bd9bff64d899da5e7f0a6d27
+    m_Address: cook100_hallway_17_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ba7ebcfbbb0e6c4f869ae9a25e44e4e
+    m_Address: cook100_hallway_13_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2efe15a5018bb92479c033e878ebb91c
+    m_Address: cook100_library_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f66625ed8551a240b53e08743c1a895
+    m_Address: cook100_echall_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3360a1bf9c45504499361895edc1b57c
+    m_Address: cook100_fshall_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3379340faf1ef894eb333f5524135ae7
+    m_Address: cook100_fslab_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 343fa4e2d2178874594968ca085db79e
+    m_Address: cook100_echall_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 36f7a69b6e8cc054b8b1c8b32f237b1e
+    m_Address: cook100_hallway_15_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3940a5cca86cd6644afb9a3393ce6003
+    m_Address: cook100_fshall_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 399bc86f5a65f6447bcb42c9962fb519
+    m_Address: cook100_ectc_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3c8c0a3b66b6293438badb9437d951e8
+    m_Address: cook100_lobby2_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3cb4faea422df5d459590ea0aeac9614
+    m_Address: cook100_lobby_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3dd1efcb6201acf49912916cbda1be89
+    m_Address: cook100_ectc_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 41edb458583f92a42b626de67d0e0e06
+    m_Address: cook100_ecroom_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 47c7f213f90ee454f938aafa61038d40
+    m_Address: cook100_ectc_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4974acd7f08f77c428325783b52f00e5
+    m_Address: cook100_echall_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 505db57dcc4735d4883906ac3df7c554
+    m_Address: cook100_hallway_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 517f2c963d6ac5f409b8ac2fe521c1ef
+    m_Address: cook100_materials_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5448f0a22fdc7e146969199d75b1cc66
+    m_Address: cook100_materials_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 57155b5e42105fc46bd1083c3022383b
+    m_Address: cook100_echall_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 579b02e27465fcb448db6ae8471b5256
+    m_Address: cook100_hallway_12_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5b0946efdf75a6a4da21d2be3c7667cb
+    m_Address: cook100_fshall_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f091735f33ffc941952a888666f6852
+    m_Address: cook100_ectc_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 634454542f93ae64386eaccb80f4fad7
+    m_Address: cook100_ecroom_13_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6381f0ea79cd5c8488390ab0bacda1b8
+    m_Address: cook100_ecroom_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6598872a34722f04b81b930e43b1ba70
+    m_Address: cook100_fslab_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 65a3c970c18aab745b771d0ac8a0d1d7
+    m_Address: cook100_lobby2_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6ad12ad42866076419db5bd7c688c394
+    m_Address: cook100_hallway_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6b4e17b9f91632b4c9bd6708ff0c0ad9
+    m_Address: cook100_fslab_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6da238e407ae26d4a9b8f897d52b2b09
+    m_Address: cook100_ectc_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 729456be23986dc42bc7368a9f63e9e6
+    m_Address: cook100_ecroom_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 735b7d4bbee3d8c4d905f8e944ca14b1
+    m_Address: cook100_hallway_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7aa8ec4c6a192bd4a85eb1eca974d0b6
+    m_Address: cook100_ecroom_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7f5049deb856c774aa29e96ca91379f9
+    m_Address: cook100_hallway_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 817fe88863133d9419b87fc5b68e24e8
+    m_Address: cook100_lobby_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 82d1283ceed3403468f9aa43d6ad3ed1
+    m_Address: cook100_hallway_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 871f37a18890e6849b8b67a474612ca4
+    m_Address: cook100_lobby2_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 87c8c6636410a3349a955fea7dedba20
+    m_Address: cook100_lobby_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 88e0275e0f8ce9b449ac7d979d575825
+    m_Address: cook100_library_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8907142ebab8b7f40b76b7a1be7487cf
+    m_Address: cook100_lobby_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 8c295aa3666249041a037295fa7053d6
+    m_Address: cook100_library_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9189de4c1ba48944e9a20669b5e0a837
+    m_Address: cook100_fshall_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 943e1060e5ddef04785f2ccfad6d6c24
+    m_Address: cook100_ectc_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9853a76d58742d54b9e934725b33e699
+    m_Address: cook100_lobby_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9a823162c5c41204f8cbcbfd71f083be
+    m_Address: cook100_hallway_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9aac173fcf5811541bdadec453c43d03
+    m_Address: cook100_ectc_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9cd4952f6f3255b469aa1338606078ec
+    m_Address: cook100_echall_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fbaa8d3983e7d946b6c547331b2c88e
+    m_Address: cook100_ecroom_12_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a146759bda85ce4478fd3518ee6d7b69
+    m_Address: cook100_lobby2_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a1d2b755e209329408292a3ed783d03f
+    m_Address: cook100_fshall_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a2ae76f2d67887c47ace763657631aff
+    m_Address: cook100_hallway_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5659a03dfbb90244bfce01f6ea873ea
+    m_Address: cook100_echall_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a5c5616b06eb0294992aa2c6b2ca650e
+    m_Address: cook100_lobby2_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: a760828a3422f834da8c1aeae244fe22
+    m_Address: cook100_library_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aafed8670df8b5c47bd1622900bc8c05
+    m_Address: cook100_hallway_19_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: acb61b4fc9917604e8f7b29025a4d077
+    m_Address: cook100_library_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: aee004f912f97bd45a587bdc3611915a
+    m_Address: cook100_lobby_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b1365f7577eefa4498c67bed66f5a54c
+    m_Address: cook100_hallway_16_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b257fbf4e3af5594e804cffc4e3d13b8
+    m_Address: cook100_ecroom_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b2cabc6c8d1a0394fa7bd7aba87da4af
+    m_Address: cook100_materials_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b442ac47b829ee24cad913a8b5479450
+    m_Address: cook100_lobby2_12_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c0b0b93f5d47a8f49b646f425bec5582
+    m_Address: cook100_ecroom_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c118401c287fdb04f9b0af8b60733523
+    m_Address: cook100_lobby2_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c131bcddfae3d874481cdaaa8b338173
+    m_Address: cook100_ectc_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c33fe7168d400644a96a535f162e462d
+    m_Address: cook100_lobby2_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: c801f5df8732f2c4f81481eb7d51aff5
+    m_Address: cook100_hallway_20_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ca9ac5d85889512499cf258a6fa4b280
+    m_Address: cook100_echall_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd2904731b6021a448458a9eb0494586
+    m_Address: cook100_echall_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cd866f93af9caec448900c3babdc1ccd
+    m_Address: cook100_library_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: cf67abba2270f7944b99ea7f64c2a24d
+    m_Address: cook100_ectc_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d4d98f93d4b1db2428c09ad3dd24e459
+    m_Address: cook100_hallway_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d5c9426e0a6f6d243a5d034faccd8ad3
+    m_Address: cook100_lobby2_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d6b11c60a49fb6f428df782febf7da16
+    m_Address: cook100_hallway_14_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d76bc9caa1ef8cf449e7067a25d3c498
+    m_Address: cook100_lobby2_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d7c661f7b1a23a9458c39a072c1823bf
+    m_Address: cook100_fslab_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da62968d925fb094e8083ab55d1d8930
+    m_Address: cook100_fshall_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e5c7ff76fe62db8409c88d220f1fd1d0
+    m_Address: cook100_ecroom_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e86c3b4e6ae8cfd47948b19909a1c33e
+    m_Address: cook100_echall_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e9bd9df5513192e4aa37ddfd68148549
+    m_Address: cook100_hallway_18_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ea866af121350424fbd64ccb5f727d50
+    m_Address: cook100_hallway_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ec06e711b5b0d6f4ebf6563c55efe958
+    m_Address: cook100_fshall_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f14fddd63c3127d48821fc92b6faddf5
+    m_Address: cook100_ecroom_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f8a89a0a81f55c14780ab20e703c3ce1
+    m_Address: cook100_fshall_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: faa1b966027dfb44195671625c53a668
+    m_Address: cook100_lobby_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: faa3db5697326784c871efb4fbe5729d
+    m_Address: cook100_lobby_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fdffe85e2b8c7b24795f21361c06c1f5
+    m_Address: cook100_lobby2_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe3397bdb16205749a487886318859cb
+    m_Address: cook100_ecroom_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe55974aaefa6af43b06f75398975d06
+    m_Address: cook100_lobby_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2a8c092972401d6469b2a9fc1a420a97, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: 35e53d39073609841b18aa8082356f7c, type: 2}
+    - {fileID: 11400000, guid: 1abf4e3bc7bc6c84696d35a361199cf0, type: 2}

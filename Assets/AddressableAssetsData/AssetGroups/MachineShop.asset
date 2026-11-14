@@ -1,0 +1,413 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bbb281ee3bf0b054c82ac2347e9e782c, type: 3}
+  m_Name: MachineShop
+  m_EditorClassIdentifier: Unity.Addressables.Editor::UnityEditor.AddressableAssets.Settings.AddressableAssetGroup
+  m_GroupName: MachineShop
+  m_GUID: 9714cff6521a55649a17dc1b47f4e505
+  m_SerializeEntries:
+  - m_GUID: 02f98aa2a6b54d0448cc0979e80083c5
+    m_Address: ms_shopfloor_15_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0380a69727a1fdf4b830b9345dfb6a53
+    m_Address: ms_welding_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0635f83224ff41e4287e764bd045ea56
+    m_Address: ms_shopfloor_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 07ef69575db6a1c48b8a54a3572df04d
+    m_Address: ms_cnclathe_12_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 08594f27cb5cdbf4e94ac082567430b3
+    m_Address: ms_cnclathe_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0ace0e8590a776a4da443d74bddf8341
+    m_Address: ms_cnclathe_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cb0559408bc6d74a979c07b3d7a09b5
+    m_Address: ms_shopfloor_27_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0cd165676bf815c44be109e77b5b383e
+    m_Address: ms_shopfloor_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 0d96cc3c645cdd449aed406599c72025
+    m_Address: ms_cnclathe_17_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 10bcfa5cc5791a74980a8bf2480cab3a
+    m_Address: ms_cnclathe_25_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 11526372d52ea104aa598034959a76c2
+    m_Address: ms_shopfloor_16_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1abec4e7cdd9fb04e8b102f8347195a4
+    m_Address: ms_classroom_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1bfe122fb33f60c4f8c1239d15de32b6
+    m_Address: ms_cnclathe_20_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 1f9c3966862e1db41af13fe0194beddc
+    m_Address: ms_shopfloor_23_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 228cc46c5fd7bda47b9cd060f35a7c6f
+    m_Address: ms_cnclathe_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 22dbc1340f6954548ad3d212252709ff
+    m_Address: ms_shopfloor_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 23b0a3bad654bbf49a019fbf8b3faa4e
+    m_Address: ms_cnclathe_27_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2458a4bd375ae7d4989f474519655761
+    m_Address: ms_shopfloor_20_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 280268f9230d92345a3fbd43a961a490
+    m_Address: ms_cnclathe_24_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 28efa4d76759c994c880f27340b9a431
+    m_Address: ms_cnclathe_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ae159d62c21a6f41a0ae9e8929e1066
+    m_Address: ms_cnclathe_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2c9576183847a4b46bececb46961dae0
+    m_Address: ms_classroom_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2ee243e5bb226f743a5a0c76f0faaf3f
+    m_Address: ms_shopfloor_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 2f23005bcf8f4344fa2076243bb19add
+    m_Address: ms_entry_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 30bf9cc46e97bf34b96eadc3de2a7772
+    m_Address: ms_shopfloor_13_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 381efa78f63f28045877af6684757076
+    m_Address: ms_cnclathe_22_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 396de282d29ec8d47a4326a3ca7e6b28
+    m_Address: ms_shopfloor_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3af915b5b1ae52e4c89de85fc646521b
+    m_Address: ms_shopfloor_29_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3b9e660bd7f12bc49b5e36dbc823097d
+    m_Address: ms_welding_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 3e2ec948841e13c4081417b5558e5ac3
+    m_Address: ms_shopfloor_25_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 4094cecca3210c94abab8418769a2a16
+    m_Address: ms_welding_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 411b0fbfe33f40d4f9f2b2497acd4fdc
+    m_Address: ms_shopfloor_24_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 46327fa9a89e71f4ea4583fc811bfc15
+    m_Address: ms_cnclathe_16_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5442741a00f134e468a4d1253501ca17
+    m_Address: ms_cnclathe_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 54fcb7b540b28b54095f02fde58b85b0
+    m_Address: ms_shopfloor_26_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 553c2da0fb245274e97d05955f210cc4
+    m_Address: ms_classroom_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5635fb9abf45358409671bbe5314ff9f
+    m_Address: ms_cnclathe_19_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58ed72b1bd931624ca7079c15bab6781
+    m_Address: ms_classroom_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 58f94b2239f20fd47bdefc6a6fdee3b3
+    m_Address: ms_shopfloor_10_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 5f7e11513510fa8448d49967819edae5
+    m_Address: ms_welding_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 60a34672b10733e4fac85ef0278c7561
+    m_Address: ms_cnclathe_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 63335791914429b4bb5938b5a451d6e8
+    m_Address: ms_shopfloor_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 64d3cdb1036010a48af33edc6bcc877b
+    m_Address: ms_shopfloor_14_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 692dad32b02a1d9468b3ac44f3c22c2b
+    m_Address: ms_cnclathe_26_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 699ac91af68b2164bbe89ba85d04d409
+    m_Address: ms_cnclathe_13_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 6a5de859aea32b24c8117b6f34a382c2
+    m_Address: ms_cnclathe_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 710e96a4dc502a74690a9785881a421e
+    m_Address: ms_cnclathe_15_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 74377a7fcac0ba743a7a4a1f3cc76d03
+    m_Address: ms_shopfloor_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7511167d3857413409597994b1dc0f07
+    m_Address: ms_shopfloor_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7797b4eff056a8b4f8fa389aa4e24f0d
+    m_Address: ms_welding_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7918c1b7afc60b841ba1040c0362e0da
+    m_Address: ms_classroom_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7c89d80cfb4580f4c817b5864ae5ad49
+    m_Address: ms_shopfloor_12_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 7fa8c12347ec9c44389d49aef40e1dc4
+    m_Address: ms_entry_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 81c4a4b66c7cb884483d115c8d3ef3b0
+    m_Address: ms_shopfloor_30_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 89d6f4a2a8fa94b4b979f826b9fef5cc
+    m_Address: ms_classroom_02_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 91394d630f22a79438ee748489b1522f
+    m_Address: ms_classroom_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 924b9d77d4608c9458741005bad3c42b
+    m_Address: ms_cnclathe_18_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 95977d5638a0c36488503a41a41b604f
+    m_Address: ms_shopfloor_28_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 973385231cd1eae488112d23713a1f81
+    m_Address: ms_shopfloor_11_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9beaca832f9f1834982365de314faa49
+    m_Address: ms_classroom_09_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9ee82f5ce01be654f866b80f142157e5
+    m_Address: ms_shopfloor_18_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 9fe1dbdcde162734f9c9b4dae1fbb8ae
+    m_Address: ms_hallway_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab26d820fc3e3cc4087383712be508fc
+    m_Address: ms_welding_08_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: ab6f01e42ee26914fbdd1e9baac1768f
+    m_Address: ms_shopfloor_21_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b019933c124414243a1ebd68c299dd49
+    m_Address: ms_cnclathe_03_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b11ae842cd3432445be121f30186e7a9
+    m_Address: ms_welding_04_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b344ebe8594f2474aa727c5e6a0db04f
+    m_Address: ms_shopfloor_19_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: b6122ddf26a4703468aeb9207ef59b2e
+    m_Address: ms_welding_01_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bcbde9e74a844234faf2dabea625d466
+    m_Address: ms_shopfloor_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: bd8216252f99027468154ad016fce7ff
+    m_Address: ms_cnclathe_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d164d1902c43bdd4592ff740e84f8568
+    m_Address: ms_cnclathe_23_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: d8c6b1baac5eedd4eabee969078f6fcb
+    m_Address: ms_classroom_06_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e62d2953c501ffe4db378f97e0a87789
+    m_Address: ms_shopfloor_22_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: e98dd30105d71a74bad6090cddf6ca33
+    m_Address: ms_classroom_05_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f049d7e4c2f3dfd478dfff2938b9893e
+    m_Address: ms_cnclathe_21_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: f5bf398e5d724c0459318fe8aade97a1
+    m_Address: ms_shopfloor_17_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fd455bf3ffa5485479f3268bfa0406a6
+    m_Address: ms_cnclathe_07_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: fe89973dc2b59994c8c431cde393cbb8
+    m_Address: ms_cnclathe_14_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  m_ReadOnly: 0
+  m_Settings: {fileID: 11400000, guid: 2a8c092972401d6469b2a9fc1a420a97, type: 2}
+  m_SchemaSet:
+    m_Schemas:
+    - {fileID: 11400000, guid: a2e4921589ea9c34d964a779f2d6a648, type: 2}
+    - {fileID: 11400000, guid: 765b41a386a28c74cae5541368bb98c3, type: 2}

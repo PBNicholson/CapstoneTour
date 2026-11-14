@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37c14788f6aee741b6c676fffa6a888, type: 3}
+  m_Name: cook100_ectc_01
+  m_EditorClassIdentifier: Assembly-CSharp::NodeData
+  id: cook100_ectc_01
+  displayName: Teacher Center 1
+  position: {x: 28, y: 0, z: 10}
+  floor: 1
+  panoramaTexture:
+    m_AssetGUID: 943e1060e5ddef04785f2ccfad6d6c24
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  panoramaRotation: 359
+  pointsOfInterest: []

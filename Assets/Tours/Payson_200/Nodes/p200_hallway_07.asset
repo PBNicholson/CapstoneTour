@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c37c14788f6aee741b6c676fffa6a888, type: 3}
+  m_Name: p200_hallway_07
+  m_EditorClassIdentifier: Assembly-CSharp::NodeData
+  id: p200_hallway_07
+  displayName: Main Hallway 7
+  position: {x: 11, y: 0, z: -24}
+  floor: 2
+  panoramaTexture:
+    m_AssetGUID: dbca225702fd82343a469ab9da43b501
+    m_SubObjectName: 
+    m_SubObjectType: 
+    m_SubObjectGUID: 
+    m_EditorAssetChanged: 0
+  panoramaRotation: 358
+  pointsOfInterest: []
