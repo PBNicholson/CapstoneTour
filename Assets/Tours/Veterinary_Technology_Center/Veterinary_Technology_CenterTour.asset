@@ -10,13 +10,13 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 200ed3a42059ecf4fb09aa2fb702fff1, type: 3}
-  m_Name: Veterinary Technology CenterTour
+  m_Name: Veterinary_Technology_CenterTour
   m_EditorClassIdentifier: Assembly-CSharp::TourData
   buildingName: Veterinary Technology Center
   buildingThumbnail: {fileID: 0}
   northOffset: 0
   description: 
-  navigationRadius: 3
+  navigationRadius: 20
   defaultStartNodeId: vt_lobby_03
   floors: 01000000
   nodes:
@@ -142,3 +142,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 7c37897d121a2dd4ea793f8e6a52a991, type: 2}
   - {fileID: 11400000, guid: db5332af495d31244af853ed575ae8dc, type: 2}
   - {fileID: 11400000, guid: 53aa47d3297a49a47b349e4b214c9ac3, type: 2}
+  layout: {fileID: 11400000, guid: b774286d9bb35ca40ae1001c2618e5ec, type: 2}

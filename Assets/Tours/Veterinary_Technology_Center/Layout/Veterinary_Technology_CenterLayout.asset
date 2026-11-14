@@ -1,0 +1,382 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5c9668d8a6926c44ab911091febef4fc, type: 3}
+  m_Name: Veterinary_Technology_CenterLayout
+  m_EditorClassIdentifier: Assembly-CSharp::BuildingLayout
+  layoutName: VetTech
+  defaultFloorY: -5.1
+  defaultCeilingY: 3.9
+  wallMatchTolerance: 1
+  rooms:
+  - name: treatlab
+    xMin: -16.6
+    xMax: 2
+    zMin: 1.9
+    zMax: 27.7
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 4.6
+  - name: atrium_entry
+    xMin: -6
+    xMax: 1.8
+    zMin: -1
+    zMax: 1.9
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 4.6
+  - name: atrium_n
+    xMin: -18
+    xMax: 1.8
+    zMin: -13
+    zMax: -1
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 16
+  - name: atrium_s
+    xMin: -18
+    xMax: 3
+    zMin: -20
+    zMax: -13
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 16
+  - name: surgery
+    xMin: 2.4
+    xMax: 22.3
+    zMin: -10.4
+    zMax: 5.3
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 4.8
+  - name: clinichall_ns
+    xMin: 2.4
+    xMax: 7.9
+    zMin: 5.3
+    zMax: 17.2
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 4.9
+  - name: clinichall_ew
+    xMin: 7.9
+    xMax: 31
+    zMin: 5.85
+    zMax: 11.9
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.6
+  - name: xray
+    xMin: 5.2
+    xMax: 15.8
+    zMin: 17.2
+    zMax: 30.5
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.4
+  - name: labhall
+    xMin: 22.7
+    xMax: 30.4
+    zMin: -23
+    zMax: 5.85
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 14
+  - name: sidehall
+    xMin: 3
+    xMax: 22.7
+    zMin: -20.85
+    zMax: -13
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.3
+  - name: labhall_vest
+    xMin: 31
+    xMax: 41
+    zMin: 0.5
+    zMax: 9.4
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 4
+  - name: teachlab
+    xMin: 30.4
+    xMax: 63
+    zMin: -21
+    zMax: 0
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 8.5
+  - name: animalcare_s
+    xMin: 41
+    xMax: 65
+    zMin: 3
+    zMax: 10
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.9
+  - name: animalcare_n
+    xMin: 37.7
+    xMax: 61.5
+    zMin: 10
+    zMax: 17
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.9
+  - name: animalhall
+    xMin: 65
+    xMax: 84
+    zMin: 2.6
+    zMax: 9.2
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.9
+  - name: dogruns_b
+    xMin: 61.5
+    xMax: 72.2
+    zMin: 10
+    zMax: 29
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.65
+  - name: dogruns_a
+    xMin: 72.7
+    xMax: 87.5
+    zMin: 9.7
+    zMax: 28
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.65
+  - name: smallanimal
+    xMin: 37.7
+    xMax: 44.3
+    zMin: 17
+    zMax: 33
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 4.2
+  - name: catward_w
+    xMin: 47.7
+    xMax: 55
+    zMin: 17
+    zMax: 30
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.9
+  - name: catward_e
+    xMin: 55
+    xMax: 61.5
+    zMin: 17
+    zMax: 30
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 3.9
+  - name: lounge
+    xMin: -10
+    xMax: 11
+    zMin: -37.5
+    zMax: -20.85
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 4.7
+  - name: classroom
+    xMin: -45.5
+    xMax: -18
+    zMin: -57
+    zMax: -17.5
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 9.5
+  - name: mainhall
+    xMin: -18
+    xMax: -10
+    zMin: -141.8
+    zMax: -20
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 7.4
+  - name: vending
+    xMin: -10
+    xMax: 6.5
+    zMin: -71
+    zMax: -64.5
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 4
+  - name: lobby
+    xMin: -45.5
+    xMax: -18
+    zMin: -141.8
+    zMax: -124
+    overrideHeights: 1
+    floorY: -5.1
+    ceilingY: 23.5
+  doorways:
+  - name: TL-ENTRY
+    centerX: -0.6
+    centerZ: 1.9
+    runsAlong: 0
+    width: 3
+    height: 7
+  - name: ENTRY-ATRN
+    centerX: -2.1
+    centerZ: -1
+    runsAlong: 0
+    width: 7.8
+    height: 9.7
+  - name: ATRN-ATRS
+    centerX: -8.1
+    centerZ: -13
+    runsAlong: 0
+    width: 19.8
+    height: 21.1
+  - name: ATRS-SIDE
+    centerX: 3
+    centerZ: -16.5
+    runsAlong: 1
+    width: 7
+    height: 8.4
+  - name: ATRS-MAIN
+    centerX: -14
+    centerZ: -20
+    runsAlong: 0
+    width: 8
+    height: 12.5
+  - name: ATRS-LNG
+    centerX: -0.85
+    centerZ: -20.4
+    runsAlong: 0
+    width: 3.1
+    height: 7
+  - name: SIDE-LAB
+    centerX: 22.7
+    centerZ: -16.925
+    runsAlong: 1
+    width: 7.85
+    height: 8.4
+  - name: LAB-CLEW
+    centerX: 27.75
+    centerZ: 5.85
+    runsAlong: 0
+    width: 3.6
+    height: 7
+  - name: LAB-VEST
+    centerX: 30.7
+    centerZ: 2.95
+    runsAlong: 1
+    width: 4.8
+    height: 7
+  - name: LAB-TEACH
+    centerX: 30.4
+    centerZ: -4.8
+    runsAlong: 1
+    width: 3
+    height: 7
+  - name: CLEW-CLNS
+    centerX: 7.9
+    centerZ: 10.25
+    runsAlong: 1
+    width: 3.3
+    height: 8.7
+  - name: CLNS-SURG
+    centerX: 5.15
+    centerZ: 5.3
+    runsAlong: 0
+    width: 5.5
+    height: 9.9
+  - name: CLNS-TL-A
+    centerX: 2.2
+    centerZ: 8.2
+    runsAlong: 1
+    width: 3
+    height: 7
+  - name: CLNS-TL-B
+    centerX: 2.2
+    centerZ: 13.4
+    runsAlong: 1
+    width: 6.2
+    height: 7
+  - name: CLNS-XRAY
+    centerX: 6.55
+    centerZ: 17.2
+    runsAlong: 0
+    width: 2.7
+    height: 7
+  - name: VEST-ANC
+    centerX: 41
+    centerZ: 6.2
+    runsAlong: 1
+    width: 6.4
+    height: 9
+  - name: ANCS-ANCN
+    centerX: 51.25
+    centerZ: 10
+    runsAlong: 0
+    width: 20.5
+    height: 9
+  - name: ANCS-AHALL
+    centerX: 65
+    centerZ: 6.1
+    runsAlong: 1
+    width: 6.2
+    height: 9
+  - name: AHALL-DRA
+    centerX: 79.2
+    centerZ: 9.45
+    runsAlong: 0
+    width: 3
+    height: 7
+  - name: AHALL-DRB
+    centerX: 67
+    centerZ: 9.6
+    runsAlong: 0
+    width: 3.1
+    height: 7
+  - name: ANCN-CWE
+    centerX: 57.65
+    centerZ: 17
+    runsAlong: 0
+    width: 5.3
+    height: 7
+  - name: ANCN-CWW
+    centerX: 52.15
+    centerZ: 17
+    runsAlong: 0
+    width: 5.7
+    height: 7
+  - name: ANCN-SMALL
+    centerX: 42.05
+    centerZ: 17
+    runsAlong: 0
+    width: 4.5
+    height: 7
+  - name: MAIN-CLASS-A
+    centerX: -18
+    centerZ: -25.5
+    runsAlong: 1
+    width: 3.5
+    height: 7
+  - name: MAIN-CLASS-B
+    centerX: -18
+    centerZ: -53.7
+    runsAlong: 1
+    width: 3
+    height: 7
+  - name: MAIN-VEND
+    centerX: -10
+    centerZ: -67.75
+    runsAlong: 1
+    width: 6.5
+    height: 9.1
+  - name: MAIN-LOBBY
+    centerX: -18
+    centerZ: -132.9
+    runsAlong: 1
+    width: 17.8
+    height: 12.5

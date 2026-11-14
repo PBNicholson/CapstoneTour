@@ -48,6 +48,11 @@ public class TourData : ScriptableObject
     [Tooltip("All panorama nodes in this tour. Each node is a separate ScriptableObject asset.")]
     public List<NodeData> nodes = new List<NodeData>();
 
+    [Header("Geometry")]
+
+    [Tooltip("Optional. Layout used to build navigation colliders when this tour loads. Leave empty to use the scene's fallback geometry.")]
+    public BuildingLayout layout;
+
     #region Runtime Helper Methods
 
     /// <summary>
