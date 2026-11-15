@@ -1,5 +1,4 @@
 
-using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -7,17 +6,17 @@ using TMPro;
 
 /// <summary>
 /// Owns the tour list view's UI lifecycle. Builds TourListEntry instances from
-/// TourCatalog, manages single- selection state, dives the detail region, and
-/// invokes a close callback (set by MainMenuController) when the close button
+/// TourCatalog, manages single-selection state, drives the detail region, and
+/// raises CloseRequested (handled by MainMenuController) when the close button
 /// is clicked.
-/// 
+///
 /// Selection state is reset on every Open() call.
-/// 
-/// The panel GameObject must start ACTIVE in the scene so Awake can run; Awake
-/// then calls SetActive(false) to hide the manel. Subsequent Open()/Close()
-/// calls toggle it as needed.
+///
+/// This is a MenuSubPanel: MainMenuController opens and closes it and hides it when
+/// the scene starts. The panel does not deactivate itself in Awake, so its GameObject
+/// may be saved either active or inactive in the scene.
 /// </summary>
-public class ListViewPanel : MonoBehaviour
+public class ListViewPanel : MenuSubPanel
 {
     #region Serialized Fields
 
@@ -46,7 +45,8 @@ public class ListViewPanel : MonoBehaviour
              "Active only when an entry is selected.")]
     [SerializeField] private GameObject selectionContainer;
 
-    [Tooltip("Image displaying the selected tour's thumbnail.")]
+    [Tooltip("Photo Image displaying the selected tour's thumbnail. Disabled when the tour has no thumbnail, " +
+             "so the placeholder frame behind it shows. See TourThumbnail.")]
     [SerializeField] private Image detailThumbnailImage;
 
     [Tooltip("Text displaying the selected tour's name.")]
@@ -55,20 +55,22 @@ public class ListViewPanel : MonoBehaviour
     [Tooltip("Text displaying the selected tour's description.")]
     [SerializeField] private TextMeshProUGUI detailDescriptionText;
 
+    [Tooltip("ScrollRect that scrolls the description. Reset to the top whenever a different tour is selected.")]
+    [SerializeField] private ScrollRect detailDescriptionScrollRect;
+
     [Tooltip("Button that starts the selected tour. Should live inside selectionContainer " +
              "so it's only interactable when an entry is selected.")]
     [SerializeField] private Button startTourButton;
 
     [Header("Panel Controls")]
 
-    [Tooltip("Button that closes the panel. Invokes the close callback set by MainMenuController.")]
+    [Tooltip("Button that closes the panel. Raises CloseRequested, which MainMenuController handles.")]
     [SerializeField] private Button closeButton;
 
     #endregion
 
     private readonly List<TourListEntry> _entries = new List<TourListEntry>();
     private TourListEntry _selectedEntry;
-    private Action _closeCallback;
     private bool _entriesBuilt;
 
     private void Awake()
@@ -81,43 +83,21 @@ public class ListViewPanel : MonoBehaviour
         if (closeButton != null)
             closeButton.onClick.AddListener(HandleCloseClicked);
 
-        // Start Hidden. GameObject must have been active in the scene for Awake to run.
-        gameObject.SetActive(false);
+        // No SetActive(false) here: MainMenuController hides all sub-panels in Start.
     }
 
-    #region Public API
+    #region MenuSubPanel
 
     /// <summary>
-    /// Sets the callback invoked when the close button is clicked.
-    /// Called by MainMenuController during scene initialization.
+    /// Runs on every Open(), just before the panel is activated. Builds list entries
+    /// on the first call and clears selection state on every call.
     /// </summary>
-    /// <param name="callback"></param>
-    public void SetCloseCallback(Action callback)
-    {
-        _closeCallback = callback;
-    }
-
-    /// <summary>
-    /// Activates the panel, building list entries on first call and clearing
-    /// selection state on every call.
-    /// </summary>
-    public void Open()
+    protected override void OnOpening()
     {
         if (!_entriesBuilt)
             BuildEntries();
 
         ClearSelection();
-
-        gameObject.SetActive(true);
-    }
-
-    /// <summary>
-    /// Deactivates the panel. Entry instances persist for subsequent Open() calls.
-    /// Selection state is not cleared on close - it's cleared on the next Open().
-    /// </summary>
-    public void Close()
-    {
-        gameObject.SetActive(false);
     }
 
     #endregion
@@ -173,8 +153,7 @@ public class ListViewPanel : MonoBehaviour
             return;
         }
 
-        if (detailThumbnailImage != null)
-            detailThumbnailImage.sprite = data.buildingThumbnail;
+        TourThumbnail.Apply(detailThumbnailImage, data.buildingThumbnail);
 
         if (detailNameText != null)
             detailNameText.text = data.buildingName;
@@ -187,6 +166,13 @@ public class ListViewPanel : MonoBehaviour
 
         if (selectionContainer != null)
             selectionContainer.SetActive(true);
+
+        // Start each tour's description at the top rather than at the previous tour's scroll offset.
+        if (detailDescriptionScrollRect != null)
+        {
+            detailDescriptionScrollRect.StopMovement();
+            detailDescriptionScrollRect.verticalNormalizedPosition = 1f;
+        }
     }
 
     private void ClearSelection()
@@ -198,7 +184,7 @@ public class ListViewPanel : MonoBehaviour
         }
 
         ShowPlaceholder();
-    }    
+    }
 
     private void ShowPlaceholder()
     {
@@ -226,7 +212,7 @@ public class ListViewPanel : MonoBehaviour
 
     private void HandleCloseClicked()
     {
-        _closeCallback?.Invoke();
+        RequestClose();
     }
 
 
@@ -262,6 +248,9 @@ public class ListViewPanel : MonoBehaviour
 
         if (detailDescriptionText == null)
             Debug.LogError("[ListViewPanel] DetailDescriptionText reference is not assigned.");
+
+        if (detailDescriptionScrollRect == null)
+            Debug.LogError("[ListViewPanel] DetailDescriptionScrollRect reference is not assigned.");
 
         if (startTourButton == null)
             Debug.LogError("[ListViewPanel] StartTourButton reference is not assigned.");

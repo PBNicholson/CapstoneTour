@@ -13,9 +13,15 @@ MonoBehaviour:
   m_Name: Payson_100Tour
   m_EditorClassIdentifier: Assembly-CSharp::TourData
   buildingName: Payson_100
+  caption: Payson Hall
   buildingThumbnail: {fileID: 0}
   northOffset: 0
-  description: 
+  description: Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore
+    eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt
+    in culpa qui officia deserunt mollit anim id est laborum.
   navigationRadius: 3
   defaultStartNodeId: p100_lobby_06
   floors: 01000000
@@ -85,3 +91,4 @@ MonoBehaviour:
   - {fileID: 11400000, guid: 610d36e40f08f6440a27053fa75220b1, type: 2}
   - {fileID: 11400000, guid: 3e2a05e4cf29b07458dd845a1f4ae584, type: 2}
   - {fileID: 11400000, guid: a89fd19214281ec4d9ed7347873d8701, type: 2}
+  layout: {fileID: 0}

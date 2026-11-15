@@ -14,6 +14,10 @@ public class TourData : ScriptableObject
     [Tooltip("Display name for this building shown in UI.")]
     public string buildingName;
 
+    [Tooltip("Optional short line shown under the building name in the menu tour list, for example the parent building. "
+             + "Leave empty to hide the line.")]
+    public string caption;
+
     [Tooltip("Optional thumbnail image for tour selection UI.")]
     public Sprite buildingThumbnail;
 
@@ -95,7 +99,7 @@ public class TourData : ScriptableObject
         for (int i = 0; i < nodes.Count; i++)
         {
             if (nodes[i] != null && nodes[i].floor == floor)
-                    result.Add(nodes[i]);
+                result.Add(nodes[i]);
         }
 
         return result;
@@ -114,7 +118,7 @@ public class TourData : ScriptableObject
         NodeData nearest = null;
         float nearestDistanceSqr = navigationRadius * navigationRadius;
 
-        for (int i = 0; i< nodes.Count; i++)
+        for (int i = 0; i < nodes.Count; i++)
         {
             NodeData node = nodes[i];
 

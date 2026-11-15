@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c8b1ea0d7779c964ca6ec870c82dff42, type: 3}
   m_Name: CampusTourCatalog
   m_EditorClassIdentifier: Assembly-CSharp::TourCatalog
-  menuTitle: SUNY Canton Virtual Tour
+  menuTitle: Virtual Tour
   campusMap: {fileID: 0}
   entries:
   - tourData: {fileID: 11400000, guid: a62ec44afd05d34489126d65ed7bf9da, type: 2}
