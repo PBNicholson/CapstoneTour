@@ -55,6 +55,11 @@ MonoBehaviour:
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: 45452c9ce1fdb1442970e1cc2f205da2
+    m_Address: Assets/UI Assets/Placeholders/locationPlaceholder.jpg
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: 4798e9454f9577247bf0b9aeea475772
     m_Address: wicks200_hallway_27_pano
     m_ReadOnly: 0
@@ -147,6 +152,11 @@ MonoBehaviour:
     FlaggedDuringContentUpdateRestriction: 0
   - m_GUID: d5aa2958883da0842b8b3627c702e22b
     m_Address: wicks200_hallway_14_pano
+    m_ReadOnly: 0
+    m_SerializedLabels: []
+    FlaggedDuringContentUpdateRestriction: 0
+  - m_GUID: da3e15407b156be45824dca6df5ad78a
+    m_Address: Assets/_Restyle/POI_Test_A.asset
     m_ReadOnly: 0
     m_SerializedLabels: []
     FlaggedDuringContentUpdateRestriction: 0

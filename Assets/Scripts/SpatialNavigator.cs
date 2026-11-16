@@ -1,10 +1,11 @@
-
 using UnityEngine;
+using UnityEngine.EventSystems;
 
 /// <summary>
 /// Handles Right-click spatial navigation for the virtual tour
 /// Raycasts against TourGeometry collider geometry, resolves the nearest navigable node
-/// to the hit point, and delegates navigation to TourManager
+/// to the hit point, and delegates navigation to TourManager.
+/// Right-clicks over UI (overlay controls, POI markers and panels) are ignored.
 /// </summary>
 public class SpatialNavigator : MonoBehaviour
 {
@@ -55,7 +56,7 @@ public class SpatialNavigator : MonoBehaviour
             {
                 tourGeometryMask = 1 << layerIndex;
                 Debug.LogWarning("[SpatialNavigator] TourGeometry layer mask was not assigned in the Inspector. " +
-                                 "Resolved automatically — assign it explicitly to suppress this warning.");
+                                 "Resolved automatically - assign it explicitly to suppress this warning.");
             }
         }
     }
@@ -67,6 +68,14 @@ public class SpatialNavigator : MonoBehaviour
 
         if (!Input.GetMouseButtonDown(1))
             return;
+
+        // Ignore right-clicks over any UI, including the world-space POI canvases.
+        if (EventSystem.current != null && EventSystem.current.IsPointerOverGameObject())
+        {
+            if (debugMode)
+                Debug.Log("[SpatialNavigator] Right-click ignored: pointer is over UI.");
+            return;
+        }
 
         if (tourManager.IsTransitioning)
         {
@@ -180,7 +189,7 @@ public class SpatialNavigator : MonoBehaviour
 
         if (!_isReady)
         {
-            Debug.LogWarning("[SpatialNavigator] Navigator is not ready — check reference errors above.");
+            Debug.LogWarning("[SpatialNavigator] Navigator is not ready - check reference errors above.");
             return;
         }
 

@@ -1,4 +1,4 @@
-
+using System;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.AddressableAssets;
@@ -6,9 +6,14 @@ using UnityEngine.ResourceManagement.AsyncOperations;
 using TMPro;
 
 /// <summary>
-/// Manages the POI info panel's content population, expand/collapse state,
-/// and Addressable image loading and release. Owned by a POIMarker instance.
-/// The panel GameObject starts disabled and activates on demand.
+/// Manages the POI info panel's content population, open/close state, the close button
+/// in its header, and Addressable image loading and release. Owned by a POIMarker instance.
+/// The panel GameObject is hidden by Initialize and activates on demand.
+///
+/// Image: the POIImage sits inside a frame (Gray Image plus RectMask2D) and has an
+/// AspectRatioFitter set to Envelope Parent, so the loaded sprite covers the frame and is
+/// cropped (TourThumbnail.Apply). The frame (ImageContainer) is shown only once a sprite
+/// has loaded.
 /// </summary>
 public class POIInfoPanel : MonoBehaviour
 {
@@ -16,17 +21,33 @@ public class POIInfoPanel : MonoBehaviour
 
     [Header("Content References")]
 
-    [Tooltip("Text element displaying the POI label as a header.")]
+    [Tooltip("Text element displaying the POI label in the header.")]
     [SerializeField] private TextMeshProUGUI labelText;
 
     [Tooltip("Text element displaying the POI description body.")]
     [SerializeField] private TextMeshProUGUI descriptionText;
 
-    [Tooltip("Image element that receives the Addressable sprite at runtime.")]
+    [Tooltip("Photo Image that receives the Addressable sprite at runtime. " +
+             "Needs an AspectRatioFitter set to Envelope Parent.")]
     [SerializeField] private Image poiImage;
 
-    [Tooltip("Parent GameObject of the POI image. Disabled when no image is assigned or loaded.")]
+    [Tooltip("Frame GameObject around the POI image. Disabled when no image is assigned or loaded.")]
     [SerializeField] private GameObject imageContainer;
+
+    [Header("Controls")]
+
+    [Tooltip("Close button in the panel header. Closes the panel.")]
+    [SerializeField] private Button closeButton;
+
+    #endregion
+
+    #region Events
+
+    /// <summary>
+    /// Raised when the panel opens (true) or closes (false). Not raised when Open or Close
+    /// is called on a panel that is already in that state.
+    /// </summary>
+    public event Action<bool> OpenStateChanged;
 
     #endregion
 
@@ -42,6 +63,11 @@ public class POIInfoPanel : MonoBehaviour
 
     #region Public API
 
+    /// <summary>
+    /// True while the panel is showing.
+    /// </summary>
+    public bool IsOpen => _isOpen;
+
     public void Initialize(POIData data)
     {
         _data = data;
@@ -55,6 +81,12 @@ public class POIInfoPanel : MonoBehaviour
         // Image container starts hidden - enabled only after successful load
         if (imageContainer != null)
             imageContainer.SetActive(false);
+
+        if (closeButton != null)
+        {
+            closeButton.onClick.RemoveListener(Close);
+            closeButton.onClick.AddListener(Close);
+        }
 
         _isInitialized = true;
     }
@@ -74,17 +106,22 @@ public class POIInfoPanel : MonoBehaviour
     }
 
     /// <summary>
-    /// Opens the panel and begins loading the image is one is assigned.
+    /// Opens the panel and begins loading the image if one is assigned.
     /// </summary>
     public void Open()
     {
         if (!_isInitialized)
             return;
 
+        bool wasOpen = _isOpen;
+
         gameObject.SetActive(true);
         _isOpen = true;
 
         LoadImage();
+
+        if (!wasOpen)
+            OpenStateChanged?.Invoke(true);
     }
 
     /// <summary>
@@ -93,10 +130,15 @@ public class POIInfoPanel : MonoBehaviour
     /// </summary>
     public void Close()
     {
+        bool wasOpen = _isOpen;
+
         _isOpen = false;
         gameObject.SetActive(false);
 
         ReleaseImage();
+
+        if (wasOpen)
+            OpenStateChanged?.Invoke(false);
     }
 
     #endregion
@@ -147,8 +189,8 @@ public class POIInfoPanel : MonoBehaviour
             return;
         }
 
-        if (poiImage != null)
-            poiImage.sprite = handle.Result;
+        // Assigns the sprite and sets the fitter's aspect ratio so the photo covers the frame.
+        TourThumbnail.Apply(poiImage, handle.Result);
 
         if (imageContainer != null)
             imageContainer.SetActive(true);
@@ -160,8 +202,7 @@ public class POIInfoPanel : MonoBehaviour
             return;
 
         // Clear the sprite reference before releasing the handle
-        if (poiImage != null)
-            poiImage.sprite = null;
+        TourThumbnail.Apply(poiImage, null);
 
         if (imageContainer != null)
             imageContainer.SetActive(false);
@@ -192,6 +233,9 @@ public class POIInfoPanel : MonoBehaviour
 
         if (imageContainer == null)
             Debug.LogError("[POIInfoPanel] ImageContainer reference is not assigned.");
+
+        if (closeButton == null)
+            Debug.LogError("[POIInfoPanel] CloseButton reference is not assigned.");
     }
 
     #endregion

@@ -13,18 +13,18 @@ MonoBehaviour:
   m_Name: CampusTourCatalog
   m_EditorClassIdentifier: Assembly-CSharp::TourCatalog
   menuTitle: Virtual Tour
-  campusMap: {fileID: 0}
+  campusMap: {fileID: 21300000, guid: 4b1810548ff3d3d4786b2078900c8c62, type: 3}
   entries:
   - tourData: {fileID: 11400000, guid: a62ec44afd05d34489126d65ed7bf9da, type: 2}
     mapHotspotPosition: {x: 0, y: 0}
   - tourData: {fileID: 11400000, guid: 5399de9a85e14e143aaa38a98f2e4fcb, type: 2}
     mapHotspotPosition: {x: 0, y: 0}
   - tourData: {fileID: 11400000, guid: 4a756b4f7341ccf46892b94a9184ac5d, type: 2}
-    mapHotspotPosition: {x: 0, y: 0}
+    mapHotspotPosition: {x: 0.5949, y: 0.6416}
   - tourData: {fileID: 11400000, guid: fd6c1f96eeaebb047bd2dce13b0fde11, type: 2}
     mapHotspotPosition: {x: 0, y: 0}
   - tourData: {fileID: 11400000, guid: 13f0eeafa0abdcf49a00c5541ce1c6e6, type: 2}
-    mapHotspotPosition: {x: 0, y: 0}
+    mapHotspotPosition: {x: 0.4032, y: 0.7006}
   - tourData: {fileID: 11400000, guid: 9ef51c08a4da2b24dab204cdbf148dcf, type: 2}
     mapHotspotPosition: {x: 0, y: 0}
   - tourData: {fileID: 11400000, guid: f0c5b7e2f730f7c48bfb93e562d1375e, type: 2}

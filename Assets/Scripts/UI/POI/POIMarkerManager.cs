@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,6 +6,8 @@ using UnityEngine;
 /// Subscribes to TourManager.OnNodeChanged and spawns/despawns markers
 /// when the active node changes. Each marker is positioned at its POIData's
 /// worldPosition and self-configures via POIMarker.Initialize().
+/// Markers are sized from the sizing canvas's scale factor, so they follow the same
+/// Canvas Scaler rule as the overlay UI.
 /// </summary>
 public class POIMarkerManager : MonoBehaviour
 {
@@ -19,6 +20,10 @@ public class POIMarkerManager : MonoBehaviour
 
     [Tooltip("Main camera used for world-space canvas rendering and billboarding. Required.")]
     [SerializeField] private Camera mainCamera;
+
+    [Tooltip("The overlay canvas (OverlayCanvas). Its Canvas Scaler's scale factor sets how many screen pixels " +
+             "one POI canvas unit covers, so POI markers match the rest of the UI. Required.")]
+    [SerializeField] private Canvas sizingCanvas;
 
     [Header("Prefab")]
 
@@ -96,7 +101,7 @@ public class POIMarkerManager : MonoBehaviour
                 continue;
             }
 
-            marker.Initialize(poiData, mainCamera, tourManager);
+            marker.Initialize(poiData, mainCamera, tourManager, sizingCanvas);
             _activeMarkers.Add(marker);
         }
     }
@@ -129,6 +134,11 @@ public class POIMarkerManager : MonoBehaviour
         if (mainCamera == null)
         {
             Debug.LogError("[POIMarkerManager] Main Camera reference is not assigned.");
+            valid = false;
+        }
+        if (sizingCanvas == null)
+        {
+            Debug.LogError("[POIMarkerManager] Sizing Canvas reference is not assigned.");
             valid = false;
         }
         if (markerPrefab == null)

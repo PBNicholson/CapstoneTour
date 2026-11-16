@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -49,7 +48,8 @@ public class TourCatalogEntry
     [Tooltip("The tour this entry represents. Must be assigned for the entry to appear in the menu.")]
     public TourData tourData;
 
-    [Tooltip("Anchored position of this tour's hotspot on the campus map, in the map RectTransform's local space.")]
-
+    [Tooltip("Position of this tour's hotspot on the campus map, normalised to the full map image: " +
+             "(0, 0) is the bottom-left corner and (1, 1) is the top-right. (0, 0) also means not placed yet. " +
+             "Set it with the Placement commands in the CampusMapPanel component's context menu.")]
     public Vector2 mapHotspotPosition;
 }

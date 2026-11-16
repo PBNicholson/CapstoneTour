@@ -1,4 +1,3 @@
-
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
@@ -153,26 +152,15 @@ public class ListViewPanel : MenuSubPanel
             return;
         }
 
-        TourThumbnail.Apply(detailThumbnailImage, data.buildingThumbnail);
-
-        if (detailNameText != null)
-            detailNameText.text = data.buildingName;
-
-        if (detailDescriptionText != null)
-            detailDescriptionText.text = data.description;
-
         if (noSelectionPlaceholder != null)
             noSelectionPlaceholder.SetActive(false);
 
         if (selectionContainer != null)
             selectionContainer.SetActive(true);
 
-        // Start each tour's description at the top rather than at the previous tour's scroll offset.
-        if (detailDescriptionScrollRect != null)
-        {
-            detailDescriptionScrollRect.StopMovement();
-            detailDescriptionScrollRect.verticalNormalizedPosition = 1f;
-        }
+        // Thumbnail, name, description and the description scroll reset (each tour starts at the top
+        // rather than at the previous tour's scroll offset) are shared with the campus map's detail card.
+        TourDetail.Apply(data, detailThumbnailImage, detailNameText, detailDescriptionText, detailDescriptionScrollRect);
     }
 
     private void ClearSelection()

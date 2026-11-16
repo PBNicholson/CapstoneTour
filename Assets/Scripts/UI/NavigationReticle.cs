@@ -1,18 +1,23 @@
-
 using UnityEngine;
 using UnityEngine.UI;
 
 /// <summary>
-/// Displays a screen-space reticle that tracks the mouse cursor and scales
-/// based on distance to the TourGeometry collider. Provides visual feedback
-/// for where a spatial navigation right-click raycast would land.
-/// 
-/// The reticle is a world-space quad with a SpriteRenderer. Perspective
-/// projection naturally handles apparent size (closer = larger) and
-/// foreshortening (Angled surfaces show the circle as an ellipse).
-/// 
-/// Raycasts independently from SpatialNavigato
-/// Disable this component to hide the reticle without addecting navigation.
+/// Displays a reticle that tracks the mouse cursor on the TourGeometry collider.
+/// Provides visual feedback for where a spatial navigation right-click raycast would land.
+///
+/// The reticle is a world-space SpriteRenderer. Perspective projection naturally handles
+/// apparent size (closer = larger) and foreshortening (angled surfaces show the circle as
+/// an ellipse).
+///
+/// Size: reticleRadius is half the width of the sprite's full extent, in world units
+/// (1 unit = 1 foot). The scale is computed from the sprite's own size and the parent's
+/// scale, so the world size does not depend on the sprite's pixels per unit or on the
+/// parent (the reticle sits under OverlayCanvas, whose scale follows the screen size).
+///
+/// A raycast miss is a no-op: the reticle stays where it last landed.
+///
+/// Raycasts independently from SpatialNavigator.
+/// Disable this component to stop the reticle updating without affecting navigation.
 /// </summary>
 public class NavigationReticle : MonoBehaviour
 {
@@ -28,16 +33,17 @@ public class NavigationReticle : MonoBehaviour
 
     [Header("Scaling")]
 
-    [Tooltip("World-space radius of the reticle circle in meters. Apparent screen size is determined by perspective.")]
+    [Tooltip("World-space radius of the reticle in feet: half the width of the sprite's full extent. " +
+             "Apparent screen size is determined by perspective.")]
     [SerializeField] private float reticleRadius = 0.3f;
 
-    [Tooltip("Small offset along the surface normal to prevent 1-fighting with the collider geometry.")]
+    [Tooltip("Small offset along the surface normal to prevent z-fighting with the collider geometry.")]
     [SerializeField] private float surfaceOffset = 0.01f;
 
     [Header("References")]
 
-    [Tooltip("Transform of the reticle GameObject (must have a SpriteRenderer or Quad). " +
-             "Positioned and rotated by this script each frame.")]
+    [Tooltip("Transform of the reticle GameObject (must have a SpriteRenderer). " +
+             "Positioned, rotated and scaled by this script each frame.")]
     [SerializeField] private Transform reticleTransform;
 
     [Tooltip("Camera used for raycasting. Falls back to Camera.main if not assigned.")]
@@ -48,6 +54,7 @@ public class NavigationReticle : MonoBehaviour
     #region Private State
 
     private Camera _camera;
+    private SpriteRenderer _spriteRenderer;
     private bool _isReady;
 
     #endregion
@@ -57,6 +64,10 @@ public class NavigationReticle : MonoBehaviour
     private void Awake()
     {
         _camera = sourceCamera != null ? sourceCamera : Camera.main;
+
+        if (reticleTransform != null)
+            _spriteRenderer = reticleTransform.GetComponent<SpriteRenderer>();
+
         _isReady = ValidateReferences();
 
         // Mirror SpatialNavigator's auto-resolve pattern for the layer mask
@@ -125,15 +136,31 @@ public class NavigationReticle : MonoBehaviour
 
         reticleTransform.rotation = Quaternion.LookRotation(hit.normal, up);
 
-        // Apply world-space size (diameter = radius * 2)
-        float diameter = reticleRadius * 2f;
-        reticleTransform.localScale = new Vector3(diameter, diameter, 1f);
+        ApplyWorldSize();
 
         SetReticleVisible(true);
     }
 
+    /// <summary>
+    /// Scales the reticle so its sprite's full width is reticleRadius * 2 world units,
+    /// dividing out the sprite's own world width and the parent's scale.
+    /// </summary>
+    private void ApplyWorldSize()
+    {
+        float spriteWidth = _spriteRenderer.sprite != null ? _spriteRenderer.sprite.bounds.size.x : 0f;
+        float parentScale = reticleTransform.parent != null ? reticleTransform.parent.lossyScale.x : 1f;
+
+        // No sprite, or the parent canvas has not been scaled yet (its saved scale is 0).
+        if (spriteWidth <= 0f || parentScale <= 0.000001f)
+            return;
+
+        float scale = (reticleRadius * 2f) / (spriteWidth * parentScale);
+        reticleTransform.localScale = new Vector3(scale, scale, 1f);
+    }
+
     private void SetReticleVisible(bool visible)
     {
+        // Intentionally a no-op: the reticle stays visible, and a raycast miss leaves it where it was.
         //if (reticleTransform != null && reticleTransform.gameObject.activeSelf != visible)
         //    reticleTransform.gameObject.SetActive(visible);
     }
@@ -154,7 +181,12 @@ public class NavigationReticle : MonoBehaviour
 
         if (reticleTransform == null)
         {
-            Debug.LogError("[NavigationReticle] Reticle RectTransform is not assigned.");
+            Debug.LogError("[NavigationReticle] Reticle Transform is not assigned.");
+            valid = false;
+        }
+        else if (_spriteRenderer == null)
+        {
+            Debug.LogError("[NavigationReticle] Reticle Transform has no SpriteRenderer.");
             valid = false;
         }
 
